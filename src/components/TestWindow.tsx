@@ -12,11 +12,18 @@ import { HelpCircle } from 'lucide-react';
 
 // Rainbow effect colors
 const RAINBOW_COLORS = {
-  start: '#ff1493',
-  color1: '#ff4500',
-  color2: '#ffd700',
-  color3: '#00ff00',
-  color4: '#00bfff',
+  color1: '#f3afca',  // オリジナルのピンク
+  color2: '#ff9ecd',  // 明るいピンク
+  color3: '#ff8fb1',  // サーモンピンク
+  color4: '#ffa07a',  // ライトサーモン
+  color5: '#ffd700',  // ゴールド
+  color6: '#98fb98',  // ペールグリーン
+  color7: '#87eeda',  // ライトターコイズ
+  color8: '#87ceeb',  // スカイブルー
+  color9: '#a6c1ee',  // ペールブルー
+  color10: '#c1a6ee', // ライトパープル
+  color11: '#eea6dc', // ライトピンク
+  color12: '#f3afca'  // 最初の色に戻る
 };
 
 export default function TestWindow() {
@@ -72,33 +79,47 @@ export default function TestWindow() {
 
   return (
     <Background>
-      <style>
-        {`
+<style>
+  {`
           @keyframes rainbow {
-            0%, 100% { fill: ${RAINBOW_COLORS.start}; }
-            25% { fill: ${RAINBOW_COLORS.color1}; }
-            50% { fill: ${RAINBOW_COLORS.color2}; }
-            75% { fill: ${RAINBOW_COLORS.color3}; }
-            100% { fill: ${RAINBOW_COLORS.color4}; }
+            0% { fill: ${RAINBOW_COLORS.color1}; }
+            8.33% { fill: ${RAINBOW_COLORS.color2}; }
+            16.66% { fill: ${RAINBOW_COLORS.color3}; }
+            25% { fill: ${RAINBOW_COLORS.color4}; }
+            33.33% { fill: ${RAINBOW_COLORS.color5}; }
+            41.66% { fill: ${RAINBOW_COLORS.color6}; }
+            50% { fill: ${RAINBOW_COLORS.color7}; }
+            58.33% { fill: ${RAINBOW_COLORS.color8}; }
+            66.66% { fill: ${RAINBOW_COLORS.color9}; }
+            75% { fill: ${RAINBOW_COLORS.color10}; }
+            83.33% { fill: ${RAINBOW_COLORS.color11}; }
+            91.66%, 100% { fill: ${RAINBOW_COLORS.color12}; }
           }
           
           @keyframes rainbow-bg {
-            0%, 100% { background-color: ${RAINBOW_COLORS.start}; }
-            25% { background-color: ${RAINBOW_COLORS.color1}; }
-            50% { background-color: ${RAINBOW_COLORS.color2}; }
-            75% { background-color: ${RAINBOW_COLORS.color3}; }
-            100% { background-color: ${RAINBOW_COLORS.color4}; }
+            0% { background-color: ${RAINBOW_COLORS.color1}; }
+            8.33% { background-color: ${RAINBOW_COLORS.color2}; }
+            16.66% { background-color: ${RAINBOW_COLORS.color3}; }
+            25% { background-color: ${RAINBOW_COLORS.color4}; }
+            33.33% { background-color: ${RAINBOW_COLORS.color5}; }
+            41.66% { background-color: ${RAINBOW_COLORS.color6}; }
+            50% { background-color: ${RAINBOW_COLORS.color7}; }
+            58.33% { background-color: ${RAINBOW_COLORS.color8}; }
+            66.66% { background-color: ${RAINBOW_COLORS.color9}; }
+            75% { background-color: ${RAINBOW_COLORS.color10}; }
+            83.33% { background-color: ${RAINBOW_COLORS.color11}; }
+            91.66%, 100% { background-color: ${RAINBOW_COLORS.color12}; }
           }
-          
-          .rainbow-button {
-            animation: rainbow-bg 2s linear infinite;
-          }
+    
+    .rainbow-button {
+      animation: rainbow-bg 2s linear infinite;
+    }
 
-          .rainbow-logo path {
-            animation: rainbow 2s linear infinite;
-          }
-        `}
-      </style>
+    .rainbow-logo path {
+      animation: rainbow 2s linear infinite;
+    }
+  `}
+</style>
       <div className="min-h-screen flex flex-col">
         <div className="flex-1">
           <div className="relative max-w-[480px] mx-auto p-4 sm:p-8">
